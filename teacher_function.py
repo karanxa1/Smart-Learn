@@ -31,7 +31,7 @@ def generate_questions_from_text(text, no_of_questions, marks_per_part, no_parts
 
         )
     response_content = chat_response.choices[0].message.content
-    return jsonify({"response": response_content})
+    return response_content
     
 
 def extract_text_from_image(image_path):
@@ -74,7 +74,7 @@ Format:
     ]
         )
     response_content = chat_response.choices[0].message.content
-    return jsonify({"response": response_content})
+    return response_content
     
 
 def generate_student_report(name, age, cgpa, course, assigned_test, ai_test, interests, difficulty, courses_taken):
@@ -97,7 +97,7 @@ def generate_student_report(name, age, cgpa, course, assigned_test, ai_test, int
         ]
         )
     response_content = chat_response.choices[0].message.content
-    return jsonify({"response": response_content})
+    return response_content
     
 def generate_timetable_module(data,hours_per_day,days_per_week,semester_end_date,subjects):
     chat_response = client.chat.complete(
@@ -112,7 +112,7 @@ def generate_timetable_module(data,hours_per_day,days_per_week,semester_end_date
             ]
         )
     response_content = chat_response.choices[0].message.content
-    return jsonify({"response": response_content})
+    return response_content
     
    
 def cluster_topics(academic_topics):
@@ -128,7 +128,7 @@ def cluster_topics(academic_topics):
             ]
         )
     response_content = chat_response.choices[0].message.content
-    return jsonify({"response": response_content})
+    return response_content
     
 
 def generate_timetable_weak(clustered_subjects, hours_per_day):
@@ -146,6 +146,6 @@ def generate_timetable_weak(clustered_subjects, hours_per_day):
             ]
         )
     response_content = chat_response.choices[0].message.content
-    return jsonify({"response": response_content})
+    return response_content
     
     
