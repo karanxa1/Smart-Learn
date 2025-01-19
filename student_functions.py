@@ -39,6 +39,7 @@ def generate_response_from_pdf(query, pdf_text):
             ]
         )
     response_content = chat_response.choices[0].message.content
+    return response_content
     return jsonify({"response": response_content})
     
 
@@ -60,6 +61,7 @@ Answer: [Option number]'''},
             ]
         )
     response_content = chat_response.choices[0].message.content
+    return response_content
     return jsonify({"response": response_content})
     
 
@@ -75,6 +77,7 @@ def generate_ai_response(query):
             ]
         )
     response_content = chat_response.choices[0].message.content
+    return response_content
     return jsonify({"response": response_content})
     
 
@@ -90,6 +93,7 @@ def generate_project_idea(subject, topic, overview):
             ]
         )
     response_content = chat_response.choices[0].message.content
+    return response_content
     return jsonify({"response": response_content})
 
    
@@ -105,6 +109,7 @@ def generate_project_idea_questions(project_idea, query):
             ]
         )
     response_content = chat_response.choices[0].message.content
+    return response_content
     return jsonify({"response": response_content})
     
 
@@ -120,6 +125,7 @@ def generate_step_by_step_explanation(query):
             ]
         )
     response_content = chat_response.choices[0].message.content
+    return response_content
     return jsonify({"response": response_content})
     
 
@@ -135,7 +141,8 @@ def study_plan(subjects, hours, arealag, goal):
             ]
         )
     response_content = chat_response.choices[0].message.content
-    return jsonify({"response": response_content.replace('\n', '<br>')})
+    
+    return response_content.replace('\n', '<br>')
     
 
 
@@ -173,9 +180,7 @@ def spk_msg(user_input, memory):
             ]
         )
         response_content = chat_response.choices[0].message.content
-        return jsonify({"response": response_content})
-        
-     
+        return response_content
 
 
 def get_first_youtube_video_link(query):
@@ -206,8 +211,7 @@ def content_translate(text):
             ]
         )
     response_content = chat_response.choices[0].message.content
-    return jsonify({"response": response_content})
-    
+    return response_content
 
 
 def get_video_id(url):
@@ -273,8 +277,7 @@ def get_simplified_explanation(text):
             ]
         )
     response_content = chat_response.choices[0].message.content
-    return jsonify({"response": response_content})
-    
+    return response_content
 
 
 def summarise_text(url):
@@ -343,5 +346,4 @@ def content_translate(text):
         ]
         )
     response_content = chat_response.choices[0].message.content
-    return jsonify({"response": response_content})
-    
+    return response_content
