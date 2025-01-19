@@ -33,3 +33,9 @@ saved_model/**/* filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.zst filter=lfs diff=lfs merge=lfs -text
 *tfevents* filter=lfs diff=lfs merge=lfs -text
+static/AI_video.mp4 filter=lfs diff=lfs merge=lfs -text
+static/background.mp4 filter=lfs diff=lfs merge=lfs -text
+static/paper.mp4 filter=lfs diff=lfs merge=lfs -text
+static/pdf.mp4 filter=lfs diff=lfs merge=lfs -text
+static/stepbystep.mp4 filter=lfs diff=lfs merge=lfs -text
+static/Voice-chat.mp4 filter=lfs diff=lfs merge=lfs -text
